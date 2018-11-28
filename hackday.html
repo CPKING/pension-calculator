@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>AVC Calculator</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+</head>
+<style> 
+p {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.avc {
+
+    background-color: #6200EE;
+    color: white;
+    margin: 10px;
+    padding: 10px;
+    
+}
+.salary {
+  background-color: #03DAC6;
+  margin: 10px;
+  padding: 10px;
+}
+
+div.total {
+  background-color: #03DAC6;
+  margin: 10px;
+  padding: 10px;
+}
+
+div.money {     /* this will hide div with class div_class_name */
+  display:none;
+}
+
+div.heading {
+  margin-left: 10px;
+  padding-left: 10px;
+}
+
+</style>
+<body>
+<div class="heading">
+<p>Guardian Pension AVC Calculator</p>
+
+<p><i>By adding AVCs (Additional Voluntary Contributions), you can add more money to your pension, and get additional contributions from the Guardian</i></p>
+
+<p>My yearly salary is:</p>
+<input id="value1" type="string" value="15000"
+<span>
+<p>The amount of AVCs I would like to add is:</p>
+  <select id="selected2">
+      <option value=""></option>
+      <option value="0.01" data="1%">1% AVC</option>
+      <option value="0.02" data="2%">2% AVC</option>
+      <option value="0.03" data="3%">3% AVC</option>
+      <option value="0.04" data="4%">4% AVC</option>
+      <option value="0.05" data="5%">5% AVC</option>§
+      <option value="0.06" data="6%">6% AVC</option>
+      <option value="0.07" data="7%">7% AVC</option>
+      <option value="0.08" data="8%">8% AVC</option>
+      <option value="0.09" data="9%">9% AVC</option>
+      <option value="0.10" data="10%">10% AVC</option>
+
+  </select>
+
+  <input type="submit" onclick="init()">
+
+</span>
+</div>
+<div class="avc">
+<p id="result5"></p>
+<p id="result6"></p>
+</div>
+
+<div class="salary">
+<p id="result2"></p>
+</div>
+<div class="money">
+<p id="result3"></p>
+<p id="result4"></p>
+<hr>
+</div>
+<div class="avc">
+<p id="result7"></p>
+<p id="result8"></p>
+<p id="result9"></p>
+</div>
+<div class="total">
+<p id="result10"></p>
+</div>
+<hr>
+<br>
+
+<script type="text/javascript" language="javascript" charset="utf-8">
+
+function alert1(){
+    var dataCap = document.getElementById("selected2").value;
+
+    var sel = document.getElementById('selected2');
+    var selected = sel.options[sel.selectedIndex];
+    var extra = selected.getAttribute('data');
+
+    var x = document.getElementById('value1').value;
+    var y = x / 12;
+    var z = parseInt(y) * dataCap
+    var a = z * 0.5
+    var b = parseInt(z) + parseInt(a)
+    var c = z * 57.8/100
+    var d = parseInt(y) * 0.05
+    var e = parseInt(y) * 0.08
+    var f = parseInt(d) + parseInt(e.toFixed(2))
+    var g = parseInt(f) + parseInt(b)
+    
+    document.getElementById('result2').innerHTML = '£' + y.toFixed(2) + ' - Your monthly salary'
+    document.getElementById('result3').innerHTML = '£' + z.toFixed(2) + ' This is the amount you contribute'
+    document.getElementById('result4').innerHTML = '£' + a.toFixed(2) + ' This is the amount the company contributes'
+    document.getElementById('result5').innerHTML = '£' + b.toFixed(2) + ' - The extra amount that would be added to your pension each month'
+
+    document.getElementById('result6').innerHTML = '£' + c.toFixed(2) + ' - The amount your net salary would decrease by adding ' + extra + ' AVCs to your pension.'
+    document.getElementById('result7').innerHTML = '£' + d.toFixed(2) + ' - Your basic 5% pension contribution'
+    document.getElementById('result8').innerHTML = '£' + e.toFixed(2) + ' - The basic 8% company pension contribution'
+    document.getElementById('result9').innerHTML = '£' + f.toFixed(2) + ' - The total amount added to your pension each month (13% of salary)'
+    document.getElementById('result10').innerHTML = '£' + g.toFixed(2) + ' - The total amount that would be added to your pension (including your AVCs)'
+    
+}
+
+  function init() {
+    alert1();
+}
+
+</script>
+
+<!--<p>
+
+  function output(){
+    var value1 = document.getElementById('value1').value;
+
+    document.getElementById('result1').innerHTML = + parseInt(value1) / 12 + ' is your montly salary. ' + parseInt(value1) * 0.01 + ' is the amount you contribute.  ' + parseInt(value1) * 0.005 + ' is the amount the Guardian contributes. ' + parseInt(value1) * 0.015 + ' is the total amount added to your pension. ' + parseInt(value1) * 0.0058 + ' is the difference to your net pay. '
+      }
+
+  function maths(){
+    var maths = 'notext'.value;
+
+    document.getElementById('notext').innerHTML = parseInt(value1) * 0.12
+  }
+
+  function onepercent(){
+    var 'result1' = document.getElementById('result1').value;
+
+    document.getElementById('result1').innerHTML = parseInt(result1) * 100 
+      }
+
+  function output3(){
+    var value1 = document.getElementById('value1').value;
+
+    document.getElementById('result3').innerHTML = parseInt(value1) * 0.03 + ' is the monthly cost of adding 3% AVC to your monthly pay'
+      }
+  
+  function output4(){
+    var value1 = document.getElementById('value1').value;
+
+    document.getElementById('result4').innerHTML = parseInt(value1) * 0.005 + ' is the amount the Guardian contributes'
+      }
+
+  function output5(){
+    var value1 = document.getElementById('value1').value;
+
+    document.getElementById('result5').innerHTML = parseInt(value1) * 0.00585 + ' is the amount this will cost you in your pay packet'
+      }
+
+  function output6(){
+    var value1 = document.getElementById('value1').value;
+
+    document.getElementById('result6').innerHTML = parseInt(value1) * 0.015 + ' is the amount that goes into your pension'
+      } -->
+
+</body>	
+</html>
+
