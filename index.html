@@ -98,6 +98,7 @@ input[id=value1]:focus {
 <hr>
 </div>
 <div class="avc">
+<p id="explainer"></p>
 <p id="result7"></p>
 <p id="result8"></p>
 <p id="result9"></p>
@@ -131,13 +132,14 @@ function alert1(){
     document.getElementById('result2').innerHTML = '£' + y.toFixed(2) + ' - Your monthly salary'
     document.getElementById('result3').innerHTML = '£' + z.toFixed(2) + ' This is the amount you contribute'
     document.getElementById('result4').innerHTML = '£' + a.toFixed(2) + ' This is the amount the company contributes'
-    document.getElementById('result5').innerHTML = '£' + b.toFixed(2) + ' - The extra amount that would be added to your pension each month'
+    document.getElementById('result5').innerHTML = '£' + b.toFixed(2) + ' - The extra amount that would be added to your pension each month by adding ' + extra + ' AVCs to your pension.'
 
     document.getElementById('result6').innerHTML = '£' + c.toFixed(2) + ' - The amount your net salary would decrease by adding ' + extra + ' AVCs to your pension.'
     document.getElementById('result7').innerHTML = '£' + d.toFixed(2) + ' - Your basic 5% pension contribution'
     document.getElementById('result8').innerHTML = '£' + e.toFixed(2) + ' - The basic 8% company pension contribution'
     document.getElementById('result9').innerHTML = '£' + f.toFixed(2) + ' - The total amount added to your pension each month (13% of salary)'
     document.getElementById('result10').innerHTML = '£' + g.toFixed(2) + ' - The total amount that would be added to your pension (including your AVCs)'
+    document.getElementById('explainer').innerHTML = 'Your standard pension (excluding AVCs):'
     
 }
 
