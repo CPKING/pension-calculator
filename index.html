@@ -81,10 +81,11 @@ input[id=value1]:focus {
 
   </select>
 
-  <input type="submit" onclick="init()">
+  <input type="submit" onclick="init();showDiv();">
 
 </span>
 </div>
+<div id="wrap" style="display:none;">
 <div class="salary">
 <p id="result2"></p>
 </div>
@@ -92,7 +93,6 @@ input[id=value1]:focus {
 <p id="explainer"></p>
 <p id="result9"></p>
 <p id="result7"></p>
-<!--<p id="result8"></p>-->
 </div>
 <div class="avc">
 <p id="result5"></p>
@@ -101,7 +101,6 @@ input[id=value1]:focus {
 <div class="money">
 <p id="result3"></p>
 <p id="result4"></p>
-<hr>
 </div>
 
 <div class="total">
@@ -110,10 +109,12 @@ input[id=value1]:focus {
 </div>
 <hr>
 <br>
+</div>
 
 <script type="text/javascript" language="javascript" charset="utf-8">
 
 function alert1(){
+    
     var dataCap = document.getElementById("selected2").value;
 
     var sel = document.getElementById('selected2');
@@ -146,11 +147,15 @@ function alert1(){
     document.getElementById('result10').innerHTML = '£' + g.toFixed(2) + ' - The total amount added to your pension each month (including your AVCs)'
     /*document.getElementById('explainer').innerHTML = 'Your standard pension (excluding AVCs):'*/
     document.getElementById('percentage1').innerHTML = 'This is a ' + percentage.toFixed(2) + '% increase in monthly pension contributions, for a ' + percentageSalaryDecrease.toFixed(2) + '% decrease in your gross monthly salary.'
-}
+  }
 
-  function init() {
+   function init() {
     alert1();
 }
+
+  function showDiv() {
+    document.getElementById('wrap').style.display = "block";
+  }
 
 </script>
 
