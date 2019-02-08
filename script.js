@@ -1,4 +1,3 @@
-/*<script type="text/javascript" language="javascript" charset="utf-8">*/
 
 function alert1(){
     
@@ -29,10 +28,8 @@ function alert1(){
 
     document.getElementById('result6').innerHTML = '£' + c.toFixed(2) + ' - The amount your gross monthly salary would decrease by adding ' + extra + ' AVCs to your pension.'
     document.getElementById('result7').innerHTML = 'This is made up of £' + d.toFixed(2) + ' (your basic 5% pension contribution) ' + 'and £' + e.toFixed(2) + ' (The Guardians basic basic 8% pension contribution)'
-    /*document.getElementById('result8').innerHTML = '£' + e.toFixed(2) + ' - The basic 8% company pension contribution'*/
     document.getElementById('result9').innerHTML = '£' + f.toFixed(2) + ' - The total amount added to your pension each month (13% of salary)'
     document.getElementById('result10').innerHTML = '£' + g.toFixed(2) + ' - The total amount added to your pension each month (including your AVCs)'
-    /*document.getElementById('explainer').innerHTML = 'Your standard pension (excluding AVCs):'*/
     document.getElementById('percentage1').innerHTML = 'This is a ' + percentage.toFixed(2) + '% increase in monthly pension contributions, for a ' + percentageSalaryDecrease.toFixed(2) + '% decrease in your net monthly salary.'
   }
 
@@ -43,5 +40,3 @@ function alert1(){
   function showDiv() {
     document.getElementById('wrap').style.display = "block";
   }
-
-/*</script>*/

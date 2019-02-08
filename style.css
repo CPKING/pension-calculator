@@ -22,7 +22,7 @@ div.total {
   padding: 10px;
 }
 
-div.money {     /* this will hide div with class div_class_name */
+div.money {
   display:none;
 }
 
