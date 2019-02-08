@@ -135,7 +135,7 @@ function alert1(){
     var percentageSalaryDecrease = (y + c - y) / y * 100
 
     
-    document.getElementById('result2').innerHTML = '£' + y.toFixed(2) + ' - Your net monthly salary'
+    document.getElementById('result2').innerHTML = '£' + y.toFixed(2) + ' - Your gross monthly salary'
     document.getElementById('result3').innerHTML = '£' + z.toFixed(2) + ' This is the amount you contribute'
     document.getElementById('result4').innerHTML = '£' + a.toFixed(2) + ' This is the amount the company contributes'
     document.getElementById('result5').innerHTML = '£' + b.toFixed(2) + ' - The extra amount that would be added to your pension each month by adding ' + extra + ' AVCs to your pension.'
@@ -146,7 +146,7 @@ function alert1(){
     document.getElementById('result9').innerHTML = '£' + f.toFixed(2) + ' - The total amount added to your pension each month (13% of salary)'
     document.getElementById('result10').innerHTML = '£' + g.toFixed(2) + ' - The total amount added to your pension each month (including your AVCs)'
     /*document.getElementById('explainer').innerHTML = 'Your standard pension (excluding AVCs):'*/
-    document.getElementById('percentage1').innerHTML = 'This is a ' + percentage.toFixed(2) + '% increase in monthly pension contributions, for a ' + percentageSalaryDecrease.toFixed(2) + '% decrease in your gross monthly salary.'
+    document.getElementById('percentage1').innerHTML = 'This is a ' + percentage.toFixed(2) + '% increase in monthly pension contributions, for a ' + percentageSalaryDecrease.toFixed(2) + '% decrease in your net monthly salary.'
   }
 
    function init() {
