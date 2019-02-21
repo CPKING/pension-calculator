@@ -21,16 +21,16 @@ function alert1(){
     var percentageSalaryDecrease = (y + c - y) / y * 100
 
     
-    document.getElementById('result2').innerHTML = '£' + y.toFixed(2) + ' - Your gross monthly salary'
-    document.getElementById('result3').innerHTML = '£' + z.toFixed(2) + ' This is the amount you contribute'
-    document.getElementById('result4').innerHTML = '£' + a.toFixed(2) + ' This is the amount the company contributes'
-    document.getElementById('result5').innerHTML = '£' + b.toFixed(2) + ' - The extra amount that would be added to your pension each month by adding ' + extra + ' AVCs to your pension.'
+    document.getElementById('result2').innerHTML = `Your gross monthly salary is: £${y.toFixed(2)}`;
+    document.getElementById('result3').innerHTML = `£${z.toFixed(2)} is the amount you contribute to your pension each month`;
+    document.getElementById('result4').innerHTML = `£${a.toFixed(2)} is the amount the company contributes.`;
+    document.getElementById('result5').innerHTML = `£${b.toFixed(2)} is the extra amount that would be added to your pension each month by adding ${extra} AVCs to your pension.`;
 
-    document.getElementById('result6').innerHTML = '£' + c.toFixed(2) + ' - The amount your gross monthly salary would decrease by adding ' + extra + ' AVCs to your pension.'
-    document.getElementById('result7').innerHTML = 'This is made up of £' + d.toFixed(2) + ' (your basic 5% pension contribution) ' + 'and £' + e.toFixed(2) + ' (The Guardians basic basic 8% pension contribution)'
-    document.getElementById('result9').innerHTML = '£' + f.toFixed(2) + ' - The total amount added to your pension each month (13% of salary)'
-    document.getElementById('result10').innerHTML = '£' + g.toFixed(2) + ' - The total amount added to your pension each month (including your AVCs)'
-    document.getElementById('percentage1').innerHTML = 'This is a ' + percentage.toFixed(2) + '% increase in monthly pension contributions, for a ' + percentageSalaryDecrease.toFixed(2) + '% decrease in your net monthly salary.'
+    document.getElementById('result6').innerHTML = `£${c.toFixed(2)} is the amount your gross monthly salary would decrease by adding ${extra} AVCs to your pension.`;
+    document.getElementById('result7').innerHTML = `This is made up of £${d.toFixed(2)} (your basic 5% pension contribution) and £${e.toFixed(2)} (The Guardians basic basic 8% pension contribution)`;
+    document.getElementById('result9').innerHTML = `£${f.toFixed(2)} is the total amount added to your pension each month (13% of salary)`;
+    document.getElementById('result10').innerHTML = `£${g.toFixed(2)} is the total amount added to your pension each month (including your AVCs)`;
+    document.getElementById('percentage1').innerHTML = `This is a ${percentage.toFixed(2)}% increase in monthly pension contributions, for a ${percentageSalaryDecrease.toFixed(2)}% decrease in your net monthly salary.`;
   }
 
    function init() {
