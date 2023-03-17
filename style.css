@@ -2,6 +2,10 @@ h1, h2, p {
   font-family: 'Montserrat', sans-serif;
 }
 
+.results {
+  display: none;
+}
+
 .avc {
 
     background-color: #6200EE;
@@ -16,22 +20,18 @@ h1, h2, p {
   padding: 10px;
 }
 
-div.total {
+.total {
   background-color: #03DAC6;
   margin: 10px;
   padding: 10px;
 }
 
-div.money {
-  display:none;
-}
-
-div.heading {
+.heading {
   margin-left: 10px;
   padding-left: 10px;
 }
 
-input[id=value1] {
+.input {
     width: 25%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -42,6 +42,6 @@ input[id=value1] {
     outline: none;
 }
 
-input[id=value1]:focus {
+.input:focus {
     border: 3px solid #555;
 }
