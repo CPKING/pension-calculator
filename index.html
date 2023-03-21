@@ -11,66 +11,64 @@
 <div class="heading">
 <h1>Guardian Pension AVC Calculator</h1>
 
-<p><i>By adding AVCs (Additional Voluntary Contributions), you can add more money to your pension, and get additional contributions from the Guardian.</i></p>
+<p><i>By adding AVCs (Additional Voluntary Contributions), you can add more money to your pension, 
+  and get additional contributions from the Guardian.</i></p>
 
 <p>My yearly salary is:</p>
-<input id="value1" type="string" value="27500"
-<span>
-<p>The percentage of AVCs I would like to add to my pension:</p>
-  <select id="selected2">
+<form>
+  <input id="input-salary" class="input" type="string" value="27500">
+  <p>The percentage of AVCs I would like to add to my pension:</p>
+    <select id="select-avc-rate">
       <option value=""></option>
-      <option value="0.00" data="0%">I don't want to add AVCs</option>
-      <option value="0.01" data="1%">1% AVC</option>
-      <option value="0.02" data="2%">2% AVC</option>
-      <option value="0.03" data="3%">3% AVC</option>
-      <option value="0.04" data="4%">4% AVC</option>
-      <option value="0.05" data="5%">5% AVC</option>
-      <option value="0.06" data="6%">6% AVC</option>
-      <option value="0.07" data="7%">7% AVC</option>
-      <option value="0.08" data="8%">8% AVC</option>
-      <option value="0.09" data="9%">9% AVC</option>
-      <option value="0.10" data="10%">10% AVC</option>
-
-  </select>
-
-  <input type="submit" onclick="init();showDiv();">
-
-</span>
+      <option value="0.00">I don't want to add AVCs</option>
+      <option value="0.01">1% AVC</option>
+      <option value="0.02">2% AVC</option>
+      <option value="0.03">3% AVC</option>
+      <option value="0.04">4% AVC</option>
+      <option value="0.05">5% AVC</option>
+      <option value="0.06">6% AVC</option>
+      <option value="0.07">7% AVC</option>
+      <option value="0.08">8% AVC</option>
+      <option value="0.09">9% AVC</option>
+      <option value="0.10">10% AVC</option>
+    </select>
+  <button id="submit" type="button">Submit</button>
+</form>
 </div>
-<div id="wrap" style="display:none;">
-<div class="salary">
-<p id="result2"></p>
-</div>
-<div class="avc">
-<p id="explainer"></p>
-<p id="result9"></p>
-<p id="result7"></p>
-</div>
-<div class="avc">
-<p id="result5"></p>
-<p id="result6"></p>
-</div>
-<div class="money">
-<p id="result3"></p>
-<p id="result4"></p>
-</div>
+<div id="results" class="results">
+  <section class="salary">
+    <p id="result-gross-salary"></p>
+  </section>
+  <section class="avc">
+    <p id="explainer"></p>
+    <p id="result-ordinary-total"></p>
+    <p id="result-ordinary-breakdown"></p>
+  </section>
+  <section class="avc">
+    <p id="result-avc-total"></p>
+    <p id="result-avc-personal"></p>
+    <p id="result-avc-company"></p>
+    <p id="result-salary-reduction"></p>
+  </section>
+  <section class="total">
+    <p id="result-pension-total"></p>
+    <p id="result-avc-impact"></p>
+  </section>
 
-<div class="total">
-<p id="result10"></p>
-<p id="percentage1"></p>
-</div>
+  <hr>
 
-<hr>
-
-<h2>
-  Next steps
-</h2>
-<p>
-  If you would like o find out how much you currently contribute to your pension, you can email gnm.payroll@theguardian.com 
-</p>
-<p>
-  You can also complete a <a href="https://www20.landg.com/DocumentLibraryWeb/Document?lgrouter=CommApp&targetApp=MANAGEYOURSCHEME_DOCUMENTLIBRARY_ENTRY&reference=theguardian_permanent_contribution_form.pdf">pensions contributions change form here</a>, which you will need to drop off with the payroll team in people services.
-</p>
+  <h2>
+    Next steps
+  </h2>
+  <p>
+    If you would like to find out how much you currently contribute to your pension, you can email 
+    <a href="mailto:gnm.payroll@theguardian.com">gnm.payroll@theguardian.com</a>
+  </p>
+  <p>
+    You can also complete a 
+    <a href="https://www20.landg.com/DocumentLibraryWeb/Document?lgrouter=CommApp&targetApp=MANAGEYOURSCHEME_DOCUMENTLIBRARY_ENTRY&reference=theguardian_permanent_contribution_form.pdf">pensions contributions change form here</a>,
+    which you will need to drop off with the payroll team in people services.
+  </p>
 </div>
 </body>	
 </html>
